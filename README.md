@@ -104,5 +104,69 @@ Bạn cần `pull` về máy:
     $ git pull
 
 ## 5. Một số chức năng trên Github
+Chắc hẳn những ai mới vào trang https://github.com không khỏi rối mắt vì các chức năng của nó 
+<img scr="http://i.imgur.com/6iIKjit.png">
+
+Mình sẽ nói qua về các chức năng này:
+
+<img scr="http://i.imgur.com/gfQuNX4.png">
+- Số người đang xem repo này
+- Số star (giống như like ở facebook)
+- Số fork (giống kiếu follow ở facebook
+
+
+
+<img scr="http://i.imgur.com/lVqkmkW.png">
+Code - Là trang bạn đang thấy
+Issues - Để báo lỗi, khi bạn xem 1 repo nào đó, bạn thấy đoạn nào đó có vấn đề thì bạn góp ý ở đây.
+Pull requests - Chuyển repo đó cho người khác hoặc lấy repo đó về trang của mình
+Wiki - Trang giới thiệu thôi kiểu như Wikipedia (mình cũng chả dùng đến bao giờ) 
+Pulse - Thống kê các hoạt động 
+Graph - Thống kê bằng đồ thị
+Settings - Cài đặt chung 
+Dưới nữa là link `clone` 
+Cuối là tải repo về dạng zip
+
+## 6. THiết lập SSH key
+#### Trên Linux
+Dùng lệnh:
+
+    ssh-keygen -t rsa
+
+Rồi cứ enter thôi 
+```
+Enter file in which to save the key (/root/.ssh/id_rsa): [Press enter]
+Enter passphrase (empty for no passphrase): [Press enter]
+Enter same passphrase again: [Press enter]
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+```
+
+Xem trong .ssh:
+    ls ~/.ssh/
+
+Có 3 file `id_rsa       id_rsa.pub   known_hosts`
+
+Rồi lần lượt dùng các lệnh này:
+    
+
+    ssh-agent -s
+
+    ssh-add ~/.ssh/id_rsa
+
+    cat ~/.ssh/id_rsa.pub
+
+Copy đoạn key hiện ra
+<img scr="http://i.imgur.com/0XKLghy.png">
+
+Trên Github:
+Click vào avatar chọn `Settings` -> `SSH keys` -> `Add SSH key`
+Điền tên vào Title và paste đoạn key đó. Sau đó `Add key` là xong
+<img scr="http://i.imgur.com/FMnWlJs.png">
+
+
+
+*Bài viết này mình viết dựa trên những gì mình biết và một số bài hướng dẫn khác. Mình sẽ còn tiếp tục bổ sung thêm, hy vọng phần nào giúp các bạn mới học về Git có những kiến thức căn bản và làm việc được với Git* 
+
 
 

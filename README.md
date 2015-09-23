@@ -1,27 +1,28 @@
 # Git-basic
 ` Ghi chép những thao tác với git bằng dòng lệnh`
 ## 1. Git là gì
-	Nhóm của bạn có 1 project, mọi thành viên trong nhóm của bạn đều phải làm việc với project đó. Sẽ có những việc như người này sửa một ít, thêm bớt một vài dòng code. Theo cách làm thủ công, khi mà anh A sửa đổi phần nào đó, cả nhóm phải được biết. Anh A sẽ chuyển phần mới sửa đó cho anh B, C, D,... Rồi mọi chuyện tương tự như thế đối với các thành viên còn lại. Điều này vô cùng nan giải, đòi hỏi cần một kho chứa chung để tất cả thành viên cùng thao tác trên đó.
+	```Nhóm của bạn có 1 project, mọi thành viên trong nhóm của bạn đều phải làm việc với project đó. Sẽ có những việc như người này sửa một ít, thêm bớt một vài dòng code. Theo cách làm thủ công, khi mà anh A sửa đổi phần nào đó, cả nhóm phải được biết. Anh A sẽ chuyển phần mới sửa đó cho anh B, C, D,... Rồi mọi chuyện tương tự như thế đối với các thành viên còn lại. Điều này vô cùng nan giải, đòi hỏi cần một kho chứa chung để tất cả thành viên cùng thao tác trên đó.
+```
 
 - Kho chứa mà bài viết giới thiệu ở đây là [Github](https://github.com). 
 Bạn hãy tạo một tài khoản ở đây. Bình thường thì dữ liệu bạn đưa lên sẽ để ở dạng public, muốn để dạng private thì phải trả thêm khoản phí. Điều này chúng ta ch cần bận tâm tới.
 - Công cụ để làm việc với kho chứa đó là **Git**
 
 ## 2. Cài đặt git
-### Linux họ Redhat (Fedora , CentOS, OpenSUSE,...) 
+#### Linux họ Redhat (Fedora , CentOS, OpenSUSE,...) 
     $ yum install git-core 
 
-### Linux họ Debian (Ubuntu, Debian, Xandros, Linspire,...)
+#### Linux họ Debian (Ubuntu, Debian, Xandros, Linspire,...)
     $ apt-get install git
 
-### Mac
+#### Mac
 Có 2 cách:
  - Sử dụng chương trình đồ họa:
     http://sourceforge.net/projects/git-osx-installer/
  - Thông qua [MacPorts](http://www.macports.org)
     $ sudo port install git-core +svn +doc +bash_completion +gitweb
 
-### Windows
+#### Windows
     (https://git-scm.com/download/win)
 
 

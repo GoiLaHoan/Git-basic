@@ -47,47 +47,32 @@ Trước tiên bạn cần tạo một repository trên Github.
 
 Như thế là chúng ta đã có 1 kho chứa trên Github có tên là New_repo
 
-### Config - Cấu hình Email và Tên 
+### Cấu hình Email và Tên 
 Bạn phải khai báo email và tên trên máy để biết bạn là ai.
 Dùng 2 lệnh sau để khai báo:
 
     $ git config --global user.name "Tên của bạn"
     $ git config --global user.email "Địa chỉ email của bạn"
 
-### Clone - Lấy kho chứa về máy 
-Chọn HTTPS để hiện HTTPS clone URL 
-*Chúng ta cũng có thể dùng SSH nhưng phải thiết lập SSH key, cái này mình sẽ nói ở sau*
+### Lấy kho chứa về máy 
+
 <img src="http://imgur.com/I5FaHcD">
-Dùng lệnh `clone` để lấy repo về máy:
-     $ git clone https://github.com/locvx1234/New_repo.git
+### Tạo thư mục để làm việc với git
 
-`Link này là ví dụ của mình thôi nhé, của mỗi người sẽ khác nhau. `
-Sau khi thực hiện lệnh này, một directory tên là New_repo xuất hiện trên máy của bạn. Vị trí lưu directory này tại nơi bạn thực hiện lệnh.
-Bên trong thư mục New_repo sẽ có:
-- 1 file README.md 
-Có thể coi là file giới thiệu, chúng ta có thể sửa bằng bất kỳ trình soạn thảo nào. 
-- 1 dir .git (bị ẩn) chứa cấu hình Git.
-Chúng ta có thể thêm các file khác vào thư mc New_repo này để đưa lên Github.
+Ví dụ bạn có một folder tên là `Repo1` và bạn muốn cho nó lên [Github](https://github.com)
+
+    git init
 
 
-### Add, Commit, Push - Đưa file lên Github  
 
-Giả sử, bạn tạo một file hello_git.cpp trong thư mục New_repo.
-Để thực hiện `add` ta dùng lệnh:
 
-    $ git add hello_git.cpp
+### Thêm file 
+    git add file_name
 
-Nếu có nhiều file và bạn muốn `add` hết tất cả các file đó:
 
-    $ git add *
 
-Để `commit` ta dùng lệnh:
-
-    $ git commit -m "Them file hello_git.cpp"
+### Commit 
+    git commit -m "chú thích"
    
-Để `push` lên Github ta dùng lệnh:
 
-    $ git push
-
-Bạn load lại trang New_repo trên Github
 

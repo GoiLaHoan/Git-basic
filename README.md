@@ -32,7 +32,7 @@ Bạn tải về và cài đặt từ địa chỉ sau:
 *Phần này mình sẽ cập nhật sau*
 ## 4. Các thao tác với Git và Github
 *Trên Windows, sau khi cài đặt Git, chúng ta sẽ sử dụng Git Bash để gõ lệnh. Còn trên Linux và Mac thì sử dụng Terminal.*
-### Tạo 1 repository trên Github 
+#### Tạo 1 repository trên Github 
 Trước tiên bạn cần tạo một repository trên Github.
 "Repository là ngăn chứa project của bạn"
 
@@ -47,18 +47,19 @@ Trước tiên bạn cần tạo một repository trên Github.
 
 Như thế là chúng ta đã có 1 kho chứa trên Github có tên là New_repo
 
-### Config - Cấu hình Email và Tên 
+#### Config - Cấu hình Email và Tên 
 Bạn phải khai báo email và tên trên máy để biết bạn là ai.
 Dùng 2 lệnh sau để khai báo:
 
     $ git config --global user.name "Tên của bạn"
     $ git config --global user.email "Địa chỉ email của bạn"
 
-### Clone - Lấy kho chứa về máy 
+#### Clone - Lấy kho chứa về máy 
 Chọn HTTPS để hiện HTTPS clone URL 
 *Chúng ta cũng có thể dùng SSH nhưng phải thiết lập SSH key, cái này mình sẽ nói ở sau*
 <img src="http://imgur.com/I5FaHcD">
-Dùng lệnh `clone` để lấy repo về máy:
+
+Dùng lệnh `clone` để lấy repo về máy: 
      $ git clone https://github.com/locvx1234/New_repo.git
 
 `Link này là ví dụ của mình thôi nhé, của mỗi người sẽ khác nhau. `
@@ -70,8 +71,8 @@ Có thể coi là file giới thiệu, chúng ta có thể sửa bằng bất k�
 Chúng ta có thể thêm các file khác vào thư mc New_repo này để đưa lên Github.
 
 
-### Add, Commit, Push - Đưa file lên Github  
-
+#### Add, Commit, Push - Đưa file lên Github  
+#####Lưu ý là những thao tác tiếp theo phải thực hiện trong thư mục New_repo
 Giả sử, bạn tạo một file hello_git.cpp trong thư mục New_repo.
 Để thực hiện `add` ta dùng lệnh:
 
@@ -89,5 +90,19 @@ Nếu có nhiều file và bạn muốn `add` hết tất cả các file đó:
 
     $ git push
 
-Bạn load lại trang New_repo trên Github
+Bạn sẽ được hỏi username và password khi bạn đăng nhập Github
+Lưu ý là password khi mình nhập không hiện lên, bạn cứ gõ bình thường thôi.
+( Nếu dùng SSH key thì sẽ không phải nhập phần này nữa )
+
+######DONE
+Bạn load lại trang New_repo trên Github, file hello_git.cpp mà xuất hiện thì bạn đã thành công.
+<img scr="http://i.imgur.com/TAjssLZ.png">
+
+#### Pull - Lấy file về máy
+Giả sử, trong cái New_repo có sự thay đổi như thêm file hay file nào đó được sửa nhưng ở máy của bạn chưa cập nhật điều này
+Bạn cần `pull` về máy:
+    $ git pull
+
+## 5. Một số chức năng trên Github
+
 

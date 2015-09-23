@@ -96,7 +96,7 @@ Lưu ý là password khi mình nhập không hiện lên, bạn cứ gõ bình t
 
 ######DONE
 Bạn load lại trang New_repo trên Github, file hello_git.cpp mà xuất hiện thì bạn đã thành công.
-<img scr="http://i.imgur.com/TAjssLZ.png">
+<img src="http://i.imgur.com/TAjssLZ.png">
 
 #### Pull - Lấy file về máy
 Giả sử, trong cái New_repo có sự thay đổi như thêm file hay file nào đó được sửa nhưng ở máy của bạn chưa cập nhật điều này
@@ -109,14 +109,14 @@ Chắc hẳn những ai mới vào trang https://github.com không khỏi rối 
 
 Mình sẽ nói qua về các chức năng này:
 
-<img scr="http://i.imgur.com/gfQuNX4.png">
+<img src="http://i.imgur.com/gfQuNX4.png">
 - Số người đang xem repo này
 - Số star (giống như like ở facebook)
 - Số fork (giống kiếu follow ở facebook
 
 
 
-<img scr="http://i.imgur.com/lVqkmkW.png">
+<img src="http://i.imgur.com/lVqkmkW.png">
 Code - Là trang bạn đang thấy
 Issues - Để báo lỗi, khi bạn xem 1 repo nào đó, bạn thấy đoạn nào đó có vấn đề thì bạn góp ý ở đây.
 Pull requests - Chuyển repo đó cho người khác hoặc lấy repo đó về trang của mình
@@ -157,12 +157,12 @@ Rồi lần lượt dùng các lệnh này:
     cat ~/.ssh/id_rsa.pub
 
 Copy đoạn key hiện ra
-<img scr="http://i.imgur.com/0XKLghy.png">
+<img src="http://i.imgur.com/0XKLghy.png">
 
 Trên Github:
 Click vào avatar chọn `Settings` -> `SSH keys` -> `Add SSH key`
 Điền tên vào Title và paste đoạn key đó. Sau đó `Add key` là xong
-<img scr="http://i.imgur.com/FMnWlJs.png">
+<img src="http://i.imgur.com/FMnWlJs.png">
 
 
 

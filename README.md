@@ -110,6 +110,7 @@ Chắc hẳn những ai mới vào trang https://github.com không khỏi rối 
 Mình sẽ nói qua về các chức năng này:
 
 <img src="http://i.imgur.com/gfQuNX4.png">
+
 - Số người đang xem repo này
 - Số star (giống như like ở facebook)
 - Số fork (giống kiếu follow ở facebook
@@ -117,17 +118,21 @@ Mình sẽ nói qua về các chức năng này:
 
 
 <img src="http://i.imgur.com/lVqkmkW.png">
-Code - Là trang bạn đang thấy
-Issues - Để báo lỗi, khi bạn xem 1 repo nào đó, bạn thấy đoạn nào đó có vấn đề thì bạn góp ý ở đây.
-Pull requests - Chuyển repo đó cho người khác hoặc lấy repo đó về trang của mình
-Wiki - Trang giới thiệu thôi kiểu như Wikipedia (mình cũng chả dùng đến bao giờ) 
-Pulse - Thống kê các hoạt động 
-Graph - Thống kê bằng đồ thị
-Settings - Cài đặt chung 
-Dưới nữa là link `clone` 
-Cuối là tải repo về dạng zip
+
+- Code - Là trang bạn đang thấy
+- Issues - Để báo lỗi, khi bạn xem 1 repo nào đó, bạn thấy đoạn nào đó có vấn đề thì bạn góp ý ở đây.
+- Pull requests - Chuyển repo đó cho người khác hoặc lấy repo đó về trang của mình
+- Wiki - Trang giới thiệu thôi kiểu như Wikipedia (mình cũng chả dùng đến bao giờ) 
+- Pulse - Thống kê các hoạt động 
+- Graph - Thống kê bằng đồ thị
+- Settings - Cài đặt chung 
+- Dưới nữa là link `clone` 
+- Cuối là tải repo về dạng zip
 
 ## 6. THiết lập SSH key
+SSH key là gì? Hiểu đơn giản là cơ chế chìa-khóa.
+Máy bạn có mã chìa, nơi bạn cần vào ta đặt một cái mã khóa.
+Hai cái gặp nhau, khớp thì OK.
 #### Trên Linux
 Dùng lệnh:
 
@@ -164,7 +169,8 @@ Click vào avatar chọn `Settings` -> `SSH keys` -> `Add SSH key`
 Điền tên vào Title và paste đoạn key đó. Sau đó `Add key` là xong
 <img src="http://i.imgur.com/FMnWlJs.png">
 
-
+Khi cài SSH key thì khi `clone` thì bạn dùng link SSH clone URL và khi push sẽ không phải nhập  username và password nữa.
+ 
 
 *Bài viết này mình viết dựa trên những gì mình biết và một số bài hướng dẫn khác. Mình sẽ còn tiếp tục bổ sung thêm, hy vọng phần nào giúp các bạn mới học về Git có những kiến thức căn bản và làm việc được với Git* 
 

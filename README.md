@@ -52,7 +52,7 @@ Quá trình hoạt động:
 #### Tạo 1 repository trên Github 
 Trước tiên bạn cần tạo một repository[^1] trên Github.
 
-- [^1]: Repository là ngăn chứa project của bạn
+[^1]: Repository là ngăn chứa project của bạn
 
 - Click vào dấu `+` / New repository
 <img src="http://i.imgur.com/pRUCYlg.png">

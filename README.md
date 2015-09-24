@@ -5,7 +5,7 @@ Nhóm của bạn có 1 project, mọi thành viên trong nhóm của bạn đ�
 
 
 - Kho chứa mà bài viết giới thiệu ở đây là [Github](https://github.com). 
-Bạn hãy tạo một tài khoản ở đây. Bình thường thì dữ liệu bạn đưa lên sẽ để ở dạng public, muốn để dạng private thì phải trả thêm khoản phí. Điều này chúng ta ch cần bận tâm tới.
+Bạn hãy tạo một tài khoản ở đây. Bình thường thì dữ liệu bạn đưa lên sẽ để ở dạng public, muốn để dạng private thì phải trả thêm khoản phí. Điều này chúng ta chưa cần bận tâm tới.
 - Công cụ để làm việc với kho chứa đó là **Git**
 
 ## 2. Cài đặt git
@@ -21,6 +21,7 @@ Có 2 cách:
     http://sourceforge.net/projects/git-osx-installer/
  - Thông qua [MacPorts](http://www.macports.org)
 
+    
     $ sudo port install git-core +svn +doc +bash_completion +gitweb
 
 #### Windows
@@ -29,51 +30,69 @@ Bạn tải về và cài đặt từ địa chỉ sau:
 
 
 ## 3. Cơ chế hoạt động 
-*Phần này mình sẽ cập nhật sau*
+
+Có 3 khu vực đó là Working dir, Staging area, Git dir:
+<img src="https://git-scm.com/figures/18333fig0106-tn.png">
+
+Git directory: Lưu trữ CSDL cho dự án của bạn
+Staging area : Là tập tin chứa trong Git directory, chứa những gì sẽ được commit 
+Working directory: Bản sao của dự án, được kéo về (`pulled`) và lưu trên ổ cứng để chỉnh sửa 
+
+Quá trình hoạt động:
+1. Thay đổi tập tin trong `Working directory` 
+2. Tổ chức tập tin, tạo ảnh (`snapshot`) của các tập tin trong `Staging area`   <`add`>
+3. Đưa ảnh của tập tin đó vào `Git directory` <`commit`>
+
+
 ## 4. Các thao tác với Git và Github
 *Trên Windows, sau khi cài đặt Git, chúng ta sẽ sử dụng Git Bash để gõ lệnh. Còn trên Linux và Mac thì sử dụng Terminal.*
 #### Tạo 1 repository trên Github 
-Trước tiên bạn cần tạo một repository trên Github.
-"Repository là ngăn chứa project của bạn"
+Trước tiên bạn cần tạo một repository [^1] trên Github.
+- [^1]: Repository là ngăn chứa project của bạn
 
 - Click vào dấu `+` / New repository
 <img src="http://i.imgur.com/pRUCYlg.png">
 
-- Điền tên cho `Repository Name` ( ví dụ New_repo)
-- Có thể thêm mô tả cho nó trong `Description (optional)`
+- Điền tên cho `Repository Name` ( ví dụ New_repo). Có thể thêm mô tả cho nó trong `Description (optional)`
 - Check vào ô `Initialize this repository with a README`
 - Create repository 
 <img src="http://i.imgur.com/JYQCFVQ.png">
 
-Như thế là chúng ta đã có 1 kho chứa trên Github có tên là New_repo
+Như thế là chúng ta đã có 1 kho chứa trên Github có tên là ==New_repo==
 
 #### Config - Cấu hình Email và Tên 
 Bạn phải khai báo email và tên trên máy để biết bạn là ai.
-Dùng 2 lệnh sau để khai báo:
+Dùng 2 lệnh sau để khai báo (sử dụng Terminal/Git bash):
 
     $ git config --global user.name "Tên của bạn"
     $ git config --global user.email "Địa chỉ email của bạn"
 
 #### Clone - Lấy kho chứa về máy 
-Chọn HTTPS để hiện HTTPS clone URL 
+Trên trang ==New_repo== vừa tạo, chọn HTTPS để hiện HTTPS clone URL 
+
 *Chúng ta cũng có thể dùng SSH nhưng phải thiết lập SSH key, cái này mình sẽ nói ở sau*
-<img src="http://imgur.com/I5FaHcD">
+
+<img src="http://i.imgur.com/PyjB9l6.png">
 
 Dùng lệnh `clone` để lấy repo về máy: 
+
      $ git clone https://github.com/locvx1234/New_repo.git
 
-`Link này là ví dụ của mình thôi nhé, của mỗi người sẽ khác nhau. `
-Sau khi thực hiện lệnh này, một directory tên là New_repo xuất hiện trên máy của bạn. Vị trí lưu directory này tại nơi bạn thực hiện lệnh.
+
+*Link này là ví dụ của mình thôi nhé, của mỗi người sẽ khác nhau.*
+
+Sau khi thực hiện lệnh này, một directory tên là ==New_repo== xuất hiện trên máy của bạn. Vị trí lưu directory này tại nơi bạn thực hiện lệnh.
+
 Bên trong thư mục New_repo sẽ có:
-- 1 file README.md 
+* 1 file ==README.md==
 Có thể coi là file giới thiệu, chúng ta có thể sửa bằng bất kỳ trình soạn thảo nào. 
-- 1 dir .git (bị ẩn) chứa cấu hình Git.
-Chúng ta có thể thêm các file khác vào thư mc New_repo này để đưa lên Github.
+* 1 dir ==.git== (bị ẩn) chứa cấu hình Git.
+Chúng ta có thể thêm các file khác vào thư mục ==New_repo== này để đưa lên Github.
 
 
 #### Add, Commit, Push - Đưa file lên Github  
-#####Lưu ý là những thao tác tiếp theo phải thực hiện trong thư mục New_repo
-Giả sử, bạn tạo một file hello_git.cpp trong thư mục New_repo.
+#####Lưu ý là những thao tác tiếp theo phải thực hiện trong thư mục ==New_repo==
+Giả sử, bạn tạo một file ==hello_git.cpp== trong thư mục ==New_repo==.
 Để thực hiện `add` ta dùng lệnh:
 
     $ git add hello_git.cpp
@@ -90,17 +109,20 @@ Nếu có nhiều file và bạn muốn `add` hết tất cả các file đó:
 
     $ git push
 
-Bạn sẽ được hỏi username và password khi bạn đăng nhập Github
+Bạn sẽ được hỏi username và password khi bạn đăng nhập Github.
+
 Lưu ý là password khi mình nhập không hiện lên, bạn cứ gõ bình thường thôi.
-( Nếu dùng SSH key thì sẽ không phải nhập phần này nữa )
+
+*Nếu dùng SSH key thì sẽ không phải nhập phần này nữa*
 
 ######DONE
-Bạn load lại trang New_repo trên Github, file hello_git.cpp mà xuất hiện thì bạn đã thành công.
+Bạn load lại trang ==New_repo== trên Github, file ==hello_git.cpp== mà xuất hiện thì bạn đã thành công.
 <img src="http://i.imgur.com/TAjssLZ.png">
 
 #### Pull - Lấy file về máy
-Giả sử, trong cái New_repo có sự thay đổi như thêm file hay file nào đó được sửa nhưng ở máy của bạn chưa cập nhật điều này
+Giả sử, trong cái ==New_repo== có sự thay đổi như thêm file hay file nào đó được sửa nhưng ở máy của bạn chưa cập nhật điều này
 Bạn cần `pull` về máy:
+
     $ git pull
 
 ## 5. Một số chức năng trên Github
@@ -138,7 +160,7 @@ Dùng lệnh:
 
     ssh-keygen -t rsa
 
-Rồi cứ enter thôi 
+Hiện ra như này thì cứ enter thôi 
 ```
 Enter file in which to save the key (/root/.ssh/id_rsa): [Press enter]
 Enter passphrase (empty for no passphrase): [Press enter]
@@ -148,6 +170,7 @@ Your public key has been saved in /root/.ssh/id_rsa.pub.
 ```
 
 Xem trong .ssh:
+
     ls ~/.ssh/
 
 Có 3 file `id_rsa       id_rsa.pub   known_hosts`
@@ -165,11 +188,12 @@ Copy đoạn key hiện ra
 <img src="http://i.imgur.com/0XKLghy.png">
 
 Trên Github:
-Click vào avatar chọn `Settings` -> `SSH keys` -> `Add SSH key`
+Click vào avatar chọn `Settings` -> `SSH keys` -> `Add SSH key`.
+
 Điền tên vào Title và paste đoạn key đó. Sau đó `Add key` là xong
 <img src="http://i.imgur.com/FMnWlJs.png">
 
-Khi cài SSH key thì khi `clone` thì bạn dùng link SSH clone URL và khi push sẽ không phải nhập  username và password nữa.
+Khi cài SSH key thì khi `clone` thì bạn dùng link SSH clone URL và khi `push` sẽ không phải nhập  username và password nữa.
  
 
 *Bài viết này mình viết dựa trên những gì mình biết và một số bài hướng dẫn khác. Mình sẽ còn tiếp tục bổ sung thêm, hy vọng phần nào giúp các bạn mới học về Git có những kiến thức căn bản và làm việc được với Git* 

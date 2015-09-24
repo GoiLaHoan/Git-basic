@@ -34,31 +34,35 @@ Bạn tải về và cài đặt từ địa chỉ sau:
 Có 3 khu vực đó là Working dir, Staging area, Git dir:
 <img src="https://git-scm.com/figures/18333fig0106-tn.png">
 
-Git directory: Lưu trữ CSDL cho dự án của bạn
-Staging area : Là tập tin chứa trong Git directory, chứa những gì sẽ được commit 
-Working directory: Bản sao của dự án, được kéo về (`pulled`) và lưu trên ổ cứng để chỉnh sửa 
+* Git directory: Lưu trữ CSDL cho dự án của bạn
+* Staging area : Là tập tin chứa trong Git directory, chứa những gì sẽ được commit 
+* Working directory: Bản sao của dự án, được kéo về (`pulled`) và lưu trên ổ cứng để chỉnh sửa 
 
 Quá trình hoạt động:
+
 1. Thay đổi tập tin trong `Working directory` 
+
 2. Tổ chức tập tin, tạo ảnh (`snapshot`) của các tập tin trong `Staging area`   <`add`>
+
 3. Đưa ảnh của tập tin đó vào `Git directory` <`commit`>
 
 
 ## 4. Các thao tác với Git và Github
 *Trên Windows, sau khi cài đặt Git, chúng ta sẽ sử dụng Git Bash để gõ lệnh. Còn trên Linux và Mac thì sử dụng Terminal.*
 #### Tạo 1 repository trên Github 
-Trước tiên bạn cần tạo một repository [^1] trên Github.
+Trước tiên bạn cần tạo một repository[^1] trên Github.
+
 - [^1]: Repository là ngăn chứa project của bạn
 
 - Click vào dấu `+` / New repository
 <img src="http://i.imgur.com/pRUCYlg.png">
 
-- Điền tên cho `Repository Name` ( ví dụ New_repo). Có thể thêm mô tả cho nó trong `Description (optional)`
+- Điền tên cho `Repository Name` ( ví dụ **New_repo**). Có thể thêm mô tả cho nó trong `Description (optional)`
 - Check vào ô `Initialize this repository with a README`
 - Create repository 
 <img src="http://i.imgur.com/JYQCFVQ.png">
 
-Như thế là chúng ta đã có 1 kho chứa trên Github có tên là ==New_repo==
+Như thế là chúng ta đã có 1 kho chứa trên Github có tên là **New_repo**
 
 #### Config - Cấu hình Email và Tên 
 Bạn phải khai báo email và tên trên máy để biết bạn là ai.
@@ -68,7 +72,7 @@ Dùng 2 lệnh sau để khai báo (sử dụng Terminal/Git bash):
     $ git config --global user.email "Địa chỉ email của bạn"
 
 #### Clone - Lấy kho chứa về máy 
-Trên trang ==New_repo== vừa tạo, chọn HTTPS để hiện HTTPS clone URL 
+Trên trang **New_repo** vừa tạo, chọn HTTPS để copy HTTPS clone URL 
 
 *Chúng ta cũng có thể dùng SSH nhưng phải thiết lập SSH key, cái này mình sẽ nói ở sau*
 
@@ -81,18 +85,18 @@ Dùng lệnh `clone` để lấy repo về máy:
 
 *Link này là ví dụ của mình thôi nhé, của mỗi người sẽ khác nhau.*
 
-Sau khi thực hiện lệnh này, một directory tên là ==New_repo== xuất hiện trên máy của bạn. Vị trí lưu directory này tại nơi bạn thực hiện lệnh.
+Sau khi thực hiện lệnh này, một directory tên là **New_repo** xuất hiện trên máy của bạn. Vị trí lưu directory này tại nơi bạn thực hiện lệnh.
 
-Bên trong thư mục New_repo sẽ có:
-* 1 file ==README.md==
+Bên trong thư mục **New_repo** sẽ có:
+* 1 file **README.md**
 Có thể coi là file giới thiệu, chúng ta có thể sửa bằng bất kỳ trình soạn thảo nào. 
-* 1 dir ==.git== (bị ẩn) chứa cấu hình Git.
-Chúng ta có thể thêm các file khác vào thư mục ==New_repo== này để đưa lên Github.
+* 1 dir **.git** (bị ẩn) chứa cấu hình Git.
+Chúng ta có thể thêm các file khác vào thư mục **New_repo** này để đưa lên Github.
 
 
 #### Add, Commit, Push - Đưa file lên Github  
-#####Lưu ý là những thao tác tiếp theo phải thực hiện trong thư mục ==New_repo==
-Giả sử, bạn tạo một file ==hello_git.cpp== trong thư mục ==New_repo==.
+#####Lưu ý là những thao tác tiếp theo phải thực hiện trong thư mục **New_repo**
+Giả sử, bạn tạo một file **hello_git.cpp** trong thư mục **New_repo**.
 Để thực hiện `add` ta dùng lệnh:
 
     $ git add hello_git.cpp
@@ -116,11 +120,11 @@ Lưu ý là password khi mình nhập không hiện lên, bạn cứ gõ bình t
 *Nếu dùng SSH key thì sẽ không phải nhập phần này nữa*
 
 ######DONE
-Bạn load lại trang ==New_repo== trên Github, file ==hello_git.cpp== mà xuất hiện thì bạn đã thành công.
+Bạn load lại trang **New_repo** trên Github, file **hello_git.cpp** mà xuất hiện thì bạn đã thành công.
 <img src="http://i.imgur.com/TAjssLZ.png">
 
 #### Pull - Lấy file về máy
-Giả sử, trong cái ==New_repo== có sự thay đổi như thêm file hay file nào đó được sửa nhưng ở máy của bạn chưa cập nhật điều này
+Giả sử, trong cái **New_repo** có sự thay đổi như thêm file hay file nào đó được sửa nhưng ở máy của bạn chưa cập nhật điều này
 Bạn cần `pull` về máy:
 
     $ git pull
@@ -155,6 +159,8 @@ Mình sẽ nói qua về các chức năng này:
 SSH key là gì? Hiểu đơn giản là cơ chế chìa-khóa.
 Máy bạn có mã chìa, nơi bạn cần vào ta đặt một cái mã khóa.
 Hai cái gặp nhau, khớp thì OK.
+Mã chìa thì ở trên máy rồi, bây giờ ta phải tìm mã khóa để đặt lên Github
+### Lấy mã 
 #### Trên Linux
 Dùng lệnh:
 
@@ -187,10 +193,25 @@ Rồi lần lượt dùng các lệnh này:
 Copy đoạn key hiện ra
 <img src="http://i.imgur.com/0XKLghy.png">
 
+#### Trên Windows
+Bạn dùng [PuTTY-Gen](http://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe)
+
+Bạn chọn như sau :
+
+<img src="http://i.imgur.com/EXc1Mf0.jpg">
+
+Đợi một lát ...
+
+Sau đó copy đoạn key trong ô `Key` và ấn `Save private key`
+
+### Đặt mã lên Github 
+
 Trên Github:
+
 Click vào avatar chọn `Settings` -> `SSH keys` -> `Add SSH key`.
 
 Điền tên vào Title và paste đoạn key đó. Sau đó `Add key` là xong
+
 <img src="http://i.imgur.com/FMnWlJs.png">
 
 Khi cài SSH key thì khi `clone` thì bạn dùng link SSH clone URL và khi `push` sẽ không phải nhập  username và password nữa.

@@ -6,7 +6,7 @@ Nhóm của bạn có 1 project, mọi thành viên trong nhóm của bạn đ�
 
 - Kho chứa mà bài viết giới thiệu ở đây là [Github](https://github.com). 
 Bạn hãy tạo một tài khoản ở đây. Bình thường thì dữ liệu bạn đưa lên sẽ để ở dạng public, muốn để dạng private thì phải trả thêm khoản phí. Điều này chúng ta chưa cần bận tâm tới.
-- Công cụ để làm việc với kho chứa đó là **Git**
+- Công cụ để làm việc với kho chứa đó là [Git](https://vi.wikipedia.org/wiki/Git_%28ph%E1%BA%A7n_m%E1%BB%81m%29)
 
 ## 2. Cài đặt git
 #### Linux họ Redhat (Fedora , CentOS, OpenSUSE,...) 

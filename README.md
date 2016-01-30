@@ -119,6 +119,27 @@ Lưu ý là password khi mình nhập không hiện lên, bạn cứ gõ bình t
 
 *Nếu dùng SSH key thì sẽ không phải nhập phần này nữa*
 
+
+Nếu bạn đang có một thư mục trong máy (giả sử tên là playground), bạn muốn đẩy nó lên một repo mới
+
+Trên github, bạn tạo một repo tên là playground và không chọn tạo file README.md
+
+Dùng terminal: 
+    $ cd playground
+    $ git init
+
+Câu lệnh sẽ tạo một file .git trong playground (ấn Ctrl+H sẽ thấy). Thư mục này chứa tất cả tập tin cần thiết để thiết lập repo
+
+Tiếp theo, bạn tạo file README.md, rồi thực hiện add và commit như mọi khi
+
+Sau đó, bạn phải remote để đồng nhất repo local với repo trên github. Câu lệnh như sau: 
+
+    $ git remote add origin git-URL
+
+Và cuối cùng thì 
+
+    $ git push origin master 
+
 ######DONE
 Bạn load lại trang **New_repo** trên Github, file **hello_git.cpp** mà xuất hiện thì bạn đã thành công.
 <img src="http://i.imgur.com/TAjssLZ.png">

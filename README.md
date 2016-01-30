@@ -120,12 +120,15 @@ Lưu ý là password khi mình nhập không hiện lên, bạn cứ gõ bình t
 *Nếu dùng SSH key thì sẽ không phải nhập phần này nữa*
 
 
-Nếu bạn đang có một thư mục trong máy (giả sử tên là playground), bạn muốn đẩy nó lên một repo mới
+
+- Nếu bạn đang có một thư mục trong máy (giả sử tên là playground), bạn muốn đẩy nó lên một repo mới
 
 Trên github, bạn tạo một repo tên là playground và không chọn tạo file README.md
 
 Dùng terminal: 
+ 
     $ cd playground
+
     $ git init
 
 Câu lệnh sẽ tạo một file .git trong playground (ấn Ctrl+H sẽ thấy). Thư mục này chứa tất cả tập tin cần thiết để thiết lập repo

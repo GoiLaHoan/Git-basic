@@ -121,7 +121,14 @@ Lưu ý là password khi mình nhập không hiện lên, bạn cứ gõ bình t
 
 
 
-- Nếu bạn đang có một thư mục trong máy (giả sử tên là playground), bạn muốn đẩy nó lên một repo mới
+
+
+######DONE
+Bạn load lại trang **New_repo** trên Github, file **hello_git.cpp** mà xuất hiện thì bạn đã thành công.
+<img src="http://i.imgur.com/TAjssLZ.png">
+
+
+######Nếu bạn đang có một thư mục trong máy (giả sử tên là playground), bạn muốn đẩy nó lên một repo mới
 
 Trên github, bạn tạo một repo tên là playground và không chọn tạo file README.md
 
@@ -142,10 +149,6 @@ Sau đó, bạn phải remote để đồng nhất repo local với repo trên g
 Và cuối cùng thì 
 
     $ git push origin master 
-
-######DONE
-Bạn load lại trang **New_repo** trên Github, file **hello_git.cpp** mà xuất hiện thì bạn đã thành công.
-<img src="http://i.imgur.com/TAjssLZ.png">
 
 #### Pull - Lấy file về máy
 Giả sử, trong cái **New_repo** có sự thay đổi như thêm file hay file nào đó được sửa nhưng ở máy của bạn chưa cập nhật điều này

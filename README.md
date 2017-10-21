@@ -1,5 +1,5 @@
 # Git-basic
-######Ghi chép những thao tác với git bằng dòng lệnh
+###### Ghi chép những thao tác với git bằng dòng lệnh
 ## 1. Git là gì
 Nhóm của bạn có 1 project, mọi thành viên trong nhóm của bạn đều phải làm việc với project đó. Sẽ có những việc như người này sửa một ít, thêm bớt một vài dòng code. Theo cách làm thủ công, khi mà anh A sửa đổi phần nào đó, cả nhóm phải được biết. Anh A sẽ chuyển phần mới sửa đó cho anh B, C, D,... Rồi mọi chuyện tương tự như thế đối với các thành viên còn lại. Điều này vô cùng nan giải, đòi hỏi cần một kho chứa chung để tất cả thành viên cùng thao tác trên đó.
 
